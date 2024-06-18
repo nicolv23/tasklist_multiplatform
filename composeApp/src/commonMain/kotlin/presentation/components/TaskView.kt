@@ -17,6 +17,8 @@ import domain.ToDoTask
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.painterResource
 import tasklist.composeapp.generated.resources.Res
+import tasklist.composeapp.generated.resources.delete
+import tasklist.composeapp.generated.resources.star
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
