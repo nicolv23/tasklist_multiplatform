@@ -10,9 +10,11 @@ import cafe.adriel.voyager.navigator.Navigator
 import cafe.adriel.voyager.transitions.SlideTransition
 import data.MongoDB
 import org.jetbrains.compose.ui.tooling.preview.Preview
+import org.koin.core.context.startKoin
 import org.koin.dsl.module
 import presentation.screen.home.HomeScreen
 import presentation.screen.home.HomeViewModel
+import presentation.screen.task.TaskViewModel
 
 val lightRedColor = Color(color = 0xFFF57D88)
 val darkRedColor = Color(color = 0xFF77000B)
@@ -47,7 +49,8 @@ fun App() {
 
 val mongoModule = module {
     single { MongoDB() }
-    factory { HomeViewModel(get)) }
+    factory { HomeViewModel(get()) }
+    factory { TaskViewModel(get()) }
 }
 
 fun initializeKoin() {
